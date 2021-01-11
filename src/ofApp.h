@@ -1,6 +1,10 @@
 #pragma once
 
 #include "ofMain.h"
+#include <ofTrueTypeFont.h>
+#include <string>
+
+using namespace std;
 
 class ofApp : public ofBaseApp{
 
@@ -21,4 +25,9 @@ class ofApp : public ofBaseApp{
         void dragEvent(ofDragInfo dragInfo);
         void gotMessage(ofMessage msg);
 
+    private:
+        ofTrueTypeFont font;
+        string text;
+        ofVec2f position,direction;
+        float last;
 };
